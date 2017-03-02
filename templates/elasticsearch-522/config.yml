@@ -1,0 +1,8 @@
+name: Elasticsearch 5.2.2 # Name of the Catalog Entry
+description: |
+  # Description of the Catalog Entry
+version: 5.2.2 # Version of the Catalog to be used
+category: ELK # Category to be used for searching catalog entries
+maintainer: Jack Zhan # The maintainer of the catalog entry
+license: Apache2 # The license
+projectURL: https://github.com/jackzzj/es522-rancher # A URL related to the catalog entry
