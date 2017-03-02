@@ -1,11 +1,4 @@
 elasticsearch522-master:
-    image: elasticsearch:5.2.2
-    stdin_open: true
-    tty: true
-    labels:
-      io.rancher.container.pull_image: always
-      io.rancher.scheduler.affinity:host_label: group=elasticsearch
-elasticsearch522-base:
   image: elasticsearch:5.2.2
   hostname: es-master
   environment:
@@ -23,7 +16,7 @@ elasticsearch522-base:
     io.rancher.scheduler.affinity:host_label: group=elasticsearch
 elasticsearch522-node:
   image: elasticsearch:5.2.2
-  hostname: es-master
+  hostname: es-node
   environment:
     ES_JAVA_OPTS: -Xms3g -Xmx3g
   stdin_open: true

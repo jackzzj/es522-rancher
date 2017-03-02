@@ -21,17 +21,6 @@ elasticsearch522-master:
         node.master: "true"
         network.host: "_site_"
   scale: 1
-elasticsearch522-base:
-  metadata:
-    elasticsearch:
-      yml:
-        cluster.name: "${cluster_name}"
-        node.name: "$${HOSTNAME}"
-        node.data: "true"
-        node.master: "false"
-        http.enabled: "false"
-        network.host: "_site_"
-  scale: 1
 elasticsearch522-node:
   metadata:
     elasticsearch:
