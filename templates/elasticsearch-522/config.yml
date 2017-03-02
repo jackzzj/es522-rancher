@@ -1,6 +1,6 @@
 name: Elasticsearch 5.2.2 # Name of the Catalog Entry
 description: |
-  # Description of the Catalog Entry
+  # Rancher catalog for Elasticsearch 5.2.2
 version: 5.2.2 # Version of the Catalog to be used
 category: ELK # Category to be used for searching catalog entries
 maintainer: Jack Zhan # The maintainer of the catalog entry
