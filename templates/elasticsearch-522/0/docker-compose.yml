@@ -29,7 +29,7 @@ elasticsearch522-node:
   stdin_open: true
   tty: true
   links:
-    - elasticsearch522:elasticsearch
+    - elasticsearch522-master:elasticsearch
   command:
     - /docker-entrypoint.sh
     - -Ecluster.name=Elasticsearch5
