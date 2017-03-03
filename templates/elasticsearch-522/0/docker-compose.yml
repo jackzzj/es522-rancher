@@ -1,8 +1,7 @@
-elasticsearch522-master:
+elasticsearch522:
   image: elasticsearch:5.2.2
-  hostname: es-master
   environment:
-    ES_JAVA_OPTS: -Xms3g -Xmx3g
+    ES_JAVA_OPTS: -Xms2g -Xmx2g
   stdin_open: true
   tty: true
   links:
@@ -10,23 +9,8 @@ elasticsearch522-master:
   command:
     - /docker-entrypoint.sh
     - -Ecluster.name=Elasticsearch5
-    - -Ediscovery.zen.ping.unicast.hosts=elasticsearch
-  labels:
-    io.rancher.container.pull_image: always
-    io.rancher.scheduler.affinity:host_label: group=elasticsearch
-elasticsearch522-node:
-  image: elasticsearch:5.2.2
-  hostname: es-node
-  environment:
-    ES_JAVA_OPTS: -Xms3g -Xmx3g
-  stdin_open: true
-  tty: true
-  links:
-    - elasticsearch522-master:elasticsearch
-  command:
-    - /docker-entrypoint.sh
-    - -Ecluster.name=Elasticsearch5
-    - -Ediscovery.zen.ping.unicast.hosts=elasticsearch
+    - -Ediscovery.zen.ping.unicast.hosts=elasticsearch522:9300
+    - -Enetwork.host=0.0.0.0
   labels:
     io.rancher.container.pull_image: always
     io.rancher.scheduler.affinity:host_label: group=elasticsearch
