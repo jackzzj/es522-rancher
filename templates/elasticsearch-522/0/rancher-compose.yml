@@ -11,7 +11,7 @@
       type: "string"
       required: true
       default: "es"
-elasticsearch522-master:
+elasticsearch522:
   metadata:
     elasticsearch:
       yml:
@@ -20,15 +20,4 @@ elasticsearch522-master:
         node.data: "false"
         node.master: "true"
         network.host: "_site_"
-  scale: 1
-elasticsearch522-node:
-  metadata:
-    elasticsearch:
-      yml:
-        cluster.name: "${cluster_name}"
-        node.name: "$${HOSTNAME}"
-        node.data: "true"
-        node.master: "false"
-        http.enabled: "false"
-        network.host: "_site_"
-  scale: 2
+  scale: 3
