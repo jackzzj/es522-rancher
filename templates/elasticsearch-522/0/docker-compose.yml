@@ -4,11 +4,11 @@ elasticsearch522:
     ES_JAVA_OPTS: -Xms2g -Xmx2g
   stdin_open: true
   tty: true
-  command:
-    - /docker-entrypoint.sh
-    - -Ecluster.name=Elasticsearch5
-    - -Ediscovery.zen.ping.unicast.hosts=elasticsearch522:9300
-    - -Enetwork.host=0.0.0.0
+  entrypoint:
+  - /docker-entrypoint.sh
+  - -Ecluster.name=Elasticsearch5
+  - -Ediscovery.zen.ping.unicast.hosts=elasticsearch522:9300
+  - -Enetwork.host=0.0.0.0
   labels:
     io.rancher.container.pull_image: always
     io.rancher.scheduler.affinity:host_label: group=elasticsearch
