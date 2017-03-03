@@ -4,8 +4,6 @@ elasticsearch522:
     ES_JAVA_OPTS: -Xms2g -Xmx2g
   stdin_open: true
   tty: true
-  links:
-    - elasticsearch522-node:elasticsearch
   command:
     - /docker-entrypoint.sh
     - -Ecluster.name=Elasticsearch5
